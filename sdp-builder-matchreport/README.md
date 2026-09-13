@@ -1,8 +1,7 @@
 # Builder Pattern — Basketball Match Report
 
 **Course:** Software Design Patterns — Assignment #1 (Builder)
-**Author:** Kuanysh, BDA-2502, Astana IT University
-**Language:** Java 21
+**Author:** Kuanysh Mussabekuly, SE-2511, Astana IT University
 
 ## 1. What the product is
 
