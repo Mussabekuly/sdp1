@@ -1,14 +1,5 @@
 package builder;
 
-/**
- * Client.
- *
- * Demonstrates the Builder pattern from three angles:
- *  1. Direct, fully manual use of MatchReportBuilder (fluent chain).
- *  2. Director reused for a "regular season" report recipe.
- *  3. Director reused for a "finals" report recipe.
- *  4. Validation failure — build() rejects an invalid report.
- */
 public class Main {
 
     public static void main(String[] args) {
