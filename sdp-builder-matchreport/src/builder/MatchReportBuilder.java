@@ -3,28 +3,9 @@ package builder;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Builder.
- *
- * Builds a {@link MatchReport} step by step through a fluent API
- * (each method returns {@code this}), then validates and assembles
- * the final immutable Product in {@link #build()}.
- *
- * Clean Code #1 — Meaningful, intention-revealing names:
- * methods are named withHomeTeam / withAwayTeam / withScore / ...
- * so a call chain reads like a sentence, e.g.
- * new MatchReportBuilder().withHomeTeam("Astana Hawks").withScore(101, 97).build();
- *
- * Clean Code #2 — Small methods, each doing one thing:
- * every "with..." method sets exactly one piece of state; validation
- * logic lives in its own private method instead of being inlined
- * inside build().
- */
 public class MatchReportBuilder {
 
     // Clean Code #3 — No magic numbers/strings:
-    // default values are named constants instead of bare literals
-    // scattered through the code.
     private static final String DEFAULT_VENUE = "TBD Arena";
     private static final int MIN_SCORE = 0;
 
@@ -69,9 +50,6 @@ public class MatchReportBuilder {
 
     /**
      * Clean Code #4 — Validated construction:
-     * build() throws a clear, specific exception on invalid state
-     * instead of silently returning a broken/incomplete Product.
-     */
     public MatchReport build() {
         validate();
         return new MatchReport(homeTeam, awayTeam, homeScore, awayScore, venue, mvp, highlights);
