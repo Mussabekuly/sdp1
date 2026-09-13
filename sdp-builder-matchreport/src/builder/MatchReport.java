@@ -3,17 +3,6 @@ package builder;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * Product.
- *
- * Represents a finished media report about a basketball game:
- * teams, final score, MVP and highlight clips ready to publish.
- *
- * Clean Code #5 — Immutability of the Product:
- * all fields are final and there are no public setters, so once a
- * MatchReport is built it cannot be silently mutated by other code.
- * The only way to create one is through MatchReportBuilder#build().
- */
 public final class MatchReport {
 
     private final String homeTeam;
